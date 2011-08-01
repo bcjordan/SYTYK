@@ -1,0 +1,23 @@
+one:
+  name: MyString
+  location_name: MyString
+  lat: 9.99
+  lng: 9.99
+  url: MyString
+  image_url: MyString
+  category: MyString
+  location_id: 1
+  num_reviews: 1
+  ranking: 1
+
+two:
+  name: MyString
+  location_name: MyString
+  lat: 9.99
+  lng: 9.99
+  url: MyString
+  image_url: MyString
+  category: MyString
+  location_id: 1
+  num_reviews: 1
+  ranking: 1

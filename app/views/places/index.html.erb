@@ -1,0 +1,35 @@
+<% title "Places" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location Name</th>
+    <th>Lat</th>
+    <th>Lng</th>
+    <th>Url</th>
+    <th>Image Url</th>
+    <th>Category</th>
+    <th>Location</th>
+    <th>Num Reviews</th>
+    <th>Ranking</th>
+  </tr>
+  <% for place in @places %>
+    <tr>
+      <td><%= place.name %></td>
+      <td><%= place.location_name %></td>
+      <td><%= place.lat %></td>
+      <td><%= place.lng %></td>
+      <td><%= place.url %></td>
+      <td><%= place.image_url %></td>
+      <td><%= place.category %></td>
+      <td><%= place.location_id %></td>
+      <td><%= place.num_reviews %></td>
+      <td><%= place.ranking %></td>
+      <td><%= link_to "Show", place %></td>
+      <td><%= link_to "Edit", edit_place_path(place) %></td>
+      <td><%= link_to "Destroy", place, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Place", new_place_path %></p>

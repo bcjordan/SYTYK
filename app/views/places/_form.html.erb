@@ -1,0 +1,44 @@
+<%= form_for @place do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :location_name %><br />
+    <%= f.text_field :location_name %>
+  </p>
+  <p>
+    <%= f.label :lat %><br />
+    <%= f.text_field :lat %>
+  </p>
+  <p>
+    <%= f.label :lng %><br />
+    <%= f.text_field :lng %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.label :location_id %><br />
+    <%= f.text_field :location_id %>
+  </p>
+  <p>
+    <%= f.label :num_reviews %><br />
+    <%= f.text_field :num_reviews %>
+  </p>
+  <p>
+    <%= f.label :ranking %><br />
+    <%= f.text_field :ranking %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

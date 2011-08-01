@@ -1,0 +1,48 @@
+<% title "Place" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @place.name %>
+</p>
+<p>
+  <strong>Location Name:</strong>
+  <%= @place.location_name %>
+</p>
+<p>
+  <strong>Lat:</strong>
+  <%= @place.lat %>
+</p>
+<p>
+  <strong>Lng:</strong>
+  <%= @place.lng %>
+</p>
+<p>
+  <strong>Url:</strong>
+  <%= @place.url %>
+</p>
+<p>
+  <strong>Image Url:</strong>
+  <%= @place.image_url %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @place.category %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%= @place.location_id %>
+</p>
+<p>
+  <strong>Num Reviews:</strong>
+  <%= @place.num_reviews %>
+</p>
+<p>
+  <strong>Ranking:</strong>
+  <%= @place.ranking %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_place_path(@place) %> |
+  <%= link_to "Destroy", @place, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", places_path %>
+</p>
