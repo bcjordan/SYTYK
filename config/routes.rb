@@ -1,6 +1,8 @@
 SYTYK::Application.routes.draw do
   resources :places
 
+  root :to => "places#home"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

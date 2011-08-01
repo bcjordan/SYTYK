@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110801151257) do
     t.integer  "location_id"
     t.integer  "num_reviews"
     t.integer  "ranking"
+    t.decimal  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
