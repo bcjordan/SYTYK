@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/sytyk.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/facebook_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/facebook/canvas.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/facebooker.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/facebooker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/facebook_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/facebook_helper_test.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/places/home.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/plugins/.gitkeep" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SYTYK.iml" afterPath="$PROJECT_DIR$/.idea/SYTYK.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/places_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/places_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/places/home.html.erb" afterPath="$PROJECT_DIR$/app/views/places/home.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/sytyk.css" afterPath="$PROJECT_DIR$/public/stylesheets/sytyk.css" />
     </list>
     <ignored path="SYTYK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +45,7 @@
           <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/seeds.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="0" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0">
+                <state line="17" column="1" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -53,16 +63,25 @@
           <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/places/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="31" selection-start="418" selection-end="418" vertical-scroll-proportion="-14.0">
+                <state line="10" column="21" selection-start="177" selection-end="177" vertical-scroll-proportion="-7.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="home.html.erb" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/views/places/home.html.erb">
+          <file leaf-file-name="canvas.html.erb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/views/facebook/canvas.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.19565217">
+                <state line="22" column="2" selection-start="1111" selection-end="1172" vertical-scroll-proportion="0.2979684">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="asset_tag_helper.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file:///Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_view/helpers/asset_tag_helper.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="619" column="54" selection-start="34683" selection-end="34683" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -99,19 +118,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sytyk.css" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="sytyk.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/stylesheets/sytyk.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+                <state line="74" column="21" selection-start="745" selection-end="745" vertical-scroll-proportion="0.4256293">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="places_controller.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="places_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/places_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="61" selection-start="119" selection-end="119" vertical-scroll-proportion="0.026086956">
+                <state line="2" column="61" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -121,6 +140,15 @@
             <entry file="file://$PROJECT_DIR$/app/models/place.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="1" column="124" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="facebook_controller.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="14" column="32" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -144,16 +172,19 @@
       <list>
         <option value="$PROJECT_DIR$/db/migrate/20110801151257_create_places.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/place.rb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/views/places/index.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/public/stylesheets/sytyk.css" />
-        <option value="$PROJECT_DIR$/app/views/places/home.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/places_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/places/home.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/facebook/canvas.haml" />
+        <option value="$PROJECT_DIR$/public/stylesheets/sytyk.css" />
+        <option value="$PROJECT_DIR$/app/views/facebook/canvas.html.erb" />
       </list>
     </option>
   </component>
@@ -345,6 +376,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="facebook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SYTYK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SYTYK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -394,6 +447,11 @@
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/facebook" />
+    </key>
   </component>
   <component name="RunManager" selected="Rails.Development: SYTYK">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -457,6 +515,13 @@
       </EXTENSION>
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda">
@@ -614,6 +679,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.114353314" sideWeight="0.8056027" order="0" side_tool="false" content_ui="tabs" />
@@ -622,7 +688,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -662,34 +727,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="29" selection-start="248" selection-end="248" vertical-scroll-proportion="0.070901036">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_view/helpers/url_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="96" selection-start="10156" selection-end="10183" vertical-scroll-proportion="0.6039157">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="9" selection-start="85" selection-end="85" vertical-scroll-proportion="0.11076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs18/kernel.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="478" column="28" selection-start="21312" selection-end="21312" vertical-scroll-proportion="0.2673913">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/place.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="124" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
@@ -732,9 +769,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/places_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0">
+        <state line="2" column="61" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="32" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="128" selection-end="128" vertical-scroll-proportion="0.13333334">
           <folding />
         </state>
       </provider>
@@ -746,30 +797,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/sytyk.css">
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+        <state line="17" column="1" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_view/helpers/asset_tag_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="619" column="54" selection-start="34683" selection-end="34683" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/places/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="418" selection-end="418" vertical-scroll-proportion="-14.0">
+        <state line="10" column="21" selection-start="177" selection-end="177" vertical-scroll-proportion="-7.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/places/home.html.erb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/sytyk.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.19565217">
+        <state line="74" column="21" selection-start="745" selection-end="745" vertical-scroll-proportion="0.4256293">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/places_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/facebook/canvas.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="61" selection-start="119" selection-end="119" vertical-scroll-proportion="0.026086956">
+        <state line="22" column="2" selection-start="1111" selection-end="1172" vertical-scroll-proportion="0.2979684">
           <folding />
         </state>
       </provider>

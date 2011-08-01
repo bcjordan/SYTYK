@@ -1,0 +1,38 @@
+<div style="width:750px">
+<div class="header">
+  <h2>So You Think You Know <span class="highlight">Boston</span> <span class="exclaim">?</span> <a class="tinyurl" href="">(change city)</a></h2>
+</div>
+
+<div class="fbbluebox intro">
+  Hey you<% if @name %>, <b><%= @name %><% end %></b><span class="exclaim-mini">!</span>
+  Your friend Kristen is a <span class="level">Social Butterfly</span>. Right now it looks to me like you're a <span class="level">Confused Tourist</span>.
+  Start adding places you've been and answer Boston questions correctly, if you think you've <em>really</em> been to Boston...
+</div>
+
+<div class="right">
+  <div class="fbgreybox profilebox">
+    <div class="whatyouare">You are a: <span class="level">Confused Tourist</span></div>
+    <div class="levellogo"><%= image_tag "http://www.watchmojo.com/blogs/images/tourist.jpg",
+      :width => 150, :height => 150 %></div>
+    <div class="scores">
+      <div class="score"><span>20</span> places</div>
+      <div class="score"><span>10</span> answers</div>
+      <div class="score"><span>12</span> local buds</div>
+    </div>
+  </div>
+  <div class="fbbluebox profilebox">The next thing below!</div>
+</div>
+
+
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/>
+  <br/><br/>
+  <div class="fbinfobox">I am in an info box.</div>
+  <br/><br/>
+  <div class="fbcontentdivider"></div>
+  Welcome to So You Think You Know!
+  <div class="fbcontentdivider"></div>
+
+
+  <div class="fbgreybox">You have <%= @count if @count %> friends... Why don't you <a href="">see if any of them know Boston</a><span class="exclaim-mini">?</span></div>
+</div>

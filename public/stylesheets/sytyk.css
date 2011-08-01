@@ -1,4 +1,4 @@
-/* SYTYK styles */
+/* SYTYK text styles */
 h2
 {
     font-size: 18px;
@@ -15,11 +15,81 @@ h2
     font-size: 35px;
 }
 
+.exclaim-mini
+{
+    font-size: 16px;
+    margin-left: 2px;
+    margin-right: 3px;
+}
+
 .tinyurl
 {
     font-size: 10px;
     color: #3b5998;
 }
+
+.whatyouare
+{
+    margin-bottom: 5px;
+}
+
+.level
+{
+    font-size: 18px;
+}
+
+.profilebox .level
+{
+    margin-left: 5px;
+}
+
+.scores div
+{
+    float: left;
+}
+
+.score
+{
+    list-style-type: none;
+    display: list-item;
+    font-size: 15px;
+}
+
+.score span
+{
+    height: 40px;
+    font-size: 30px;
+    margin-right: 4px;
+}
+
+.intro
+{
+    line-height: 20px;
+}
+
+/* SYTYK layout styles */
+.profilebox
+{
+    width: 250px;
+    float: right;
+    margin-left: 5px;
+    clear: right;
+}
+
+.levellogo img
+{
+    width: 100px;
+    height: 100px;
+    float: right;
+    clear: left;
+    margin-right: 10px;
+}
+
+.right
+{
+    float: right;
+}
+
 
 /* FB CSS styles */
 
@@ -51,6 +121,7 @@ h2
     color: #333333;
     padding: 10px;
     font-size: 13px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 .fbbluebox
@@ -61,6 +132,7 @@ h2
     padding: 10px;
     font-size: 13px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 .fbinfobox
 {
@@ -69,6 +141,7 @@ h2
     color: #333333;
     padding: 10px;
     font-size: 13px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 .fberrorbox
@@ -78,6 +151,7 @@ h2
     color: #333333;
     padding: 10px;
     font-size: 13px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 /* Content Divider on White Background */
