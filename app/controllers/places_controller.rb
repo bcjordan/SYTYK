@@ -1,4 +1,8 @@
 class PlacesController < ApplicationController
+  def home
+    @places = Place.find_all_by_location_name("Boston").first
+  end
+
   def index
     @places = Place.all
   end
