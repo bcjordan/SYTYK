@@ -20,7 +20,7 @@
       <td><%= place.lat %></td>
       <td><%= place.lng %></td>
       <td><%= place.url %></td>
-      <td><%= place.image_url %></td>
+      <td><%= image_tag(place.image_url, :size => "16x10", :alt => place.name) %></td>
       <td><%= place.category %></td>
       <td><%= place.location_id %></td>
       <td><%= place.num_reviews %></td>
