@@ -67,12 +67,70 @@ h2
     line-height: 20px;
 }
 
-/* SYTYK layout styles */
+/*
+ * SYTYK layout styles
+ */
+
+/* Questions */
+.question-text
+{
+    padding-top: 7px;
+    font-size: 20px;
+    text-align: left;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.question
+{
+    margin: 5px 10px 10px;
+    text-align: center;
+}
+
+.question-image div
+{
+    text-align: center;
+}
+
+.question-image img
+{
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+}
+
+#answers
+{
+    width: 342px;
+    margin: 0px auto;
+    text-align: center;
+    height: 98px;
+}
+
+.answer
+{
+    width: 140px;
+    margin: 4px;
+    float: right;
+}
+
+.clickable
+{
+    cursor: pointer;
+}
+
+/* Header */
+.header_pic
+{
+    float: left;
+    margin: 8px 12px 0 4px;
+}
+
+/* Profile */
 .profilebox
 {
-    width: 250px;
+    /*width: 250px;*/
     float: right;
-    margin-left: 5px;
     clear: right;
 }
 
@@ -85,11 +143,23 @@ h2
     margin-right: 10px;
 }
 
-.right
+#right
 {
+    width: 272px;
     float: right;
 }
 
+#left
+{
+    width: 473px;
+    float: left;
+    margin-right: 5px
+}
+
+.bottom
+{
+    clear: both;
+}
 
 /* FB CSS styles */
 

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110802164354) do
+ActiveRecord::Schema.define(:version => 20110802165345) do
+
+  create_table "levels", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "places", :force => true do |t|
     t.string   "name"

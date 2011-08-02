@@ -1,9 +1,15 @@
 SYTYK::Application.routes.draw do
+  resources :levels
+
   resources :questions
 
   resources :users
 
   resources :places
+
+  resources :facebook
+
+  match 'submit_answer_ajax' => 'facebook#submit_answer_ajax'
 
   root :to => "facebook#canvas"
 

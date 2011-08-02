@@ -4,12 +4,13 @@
 </div>
 
 <div class="fbbluebox intro">
+  <%= image_tag @user.pic_square_with_logo, :class => "header_pic" %>
   Hey you<% if @name %>, <b><%= @name %><% end %></b><span class="exclaim-mini">!</span>
   Your friend Kristen is a <span class="level">Social Butterfly</span>. Right now it looks to me like you're a <span class="level">Confused Tourist</span>.
   Start adding places you've been and answer Boston questions correctly, if you think you've <em>really</em> been to Boston...
 </div>
 
-<div class="right">
+<div id="right">
   <div class="fbgreybox profilebox">
     <div class="whatyouare">You are a: <span class="level">Confused Tourist</span></div>
     <div class="levellogo"><%= image_tag "http://www.watchmojo.com/blogs/images/tourist.jpg",
@@ -23,10 +24,13 @@
   <div class="fbbluebox profilebox">The next thing below!</div>
 </div>
 
+<div id="left">
+  <div class="question ">
+    <%= render :partial => "question", :locals => { :user => @user, :fbuser => @fbuser, :number => 1 } %>
+  </div>
+</div>
 
-  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-  <br/><br/>
-  <br/><br/>
+<div class="bottom">
   <div class="fbinfobox">I am in an info box.</div>
   <div class="fbcontentdivider"></div>
   Welcome to So You Think You Know!
@@ -34,4 +38,6 @@
 
 
   <div class="fbgreybox">You have <%= @count if @count %> friends... Why don't you <a href="">see if any of them know Boston</a><span class="exclaim-mini">?</span></div>
+</div>
+  
 </div>
