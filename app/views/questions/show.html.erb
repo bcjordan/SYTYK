@@ -1,0 +1,24 @@
+<% title "Question" %>
+
+<p>
+  <strong>Question:</strong>
+  <%= @question.question %>
+</p>
+<p>
+  <strong>Options:</strong>
+  <%= @question.options %>
+</p>
+<p>
+  <strong>Answer:</strong>
+  <%= @question.answer %>
+</p>
+<p>
+  <strong>Image Url:</strong>
+  <%= @question.image_url %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_question_path(@question) %> |
+  <%= link_to "Destroy", @question, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", questions_path %>
+</p>

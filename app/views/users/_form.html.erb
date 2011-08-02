@@ -1,0 +1,24 @@
+<%= form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :uid %><br />
+    <%= f.text_field :uid %>
+  </p>
+  <p>
+    <%= f.label :pic_square_with_logo %><br />
+    <%= f.text_field :pic_square_with_logo %>
+  </p>
+  <p>
+    <%= f.label :profile_url %><br />
+    <%= f.text_field :profile_url %>
+  </p>
+  <p>
+    <%= f.label :level_id %><br />
+    <%= f.text_field :level_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

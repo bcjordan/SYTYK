@@ -1,4 +1,8 @@
 SYTYK::Application.routes.draw do
+  resources :questions
+
+  resources :users
+
   resources :places
 
   root :to => "facebook#canvas"

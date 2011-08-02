@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110801151257) do
+ActiveRecord::Schema.define(:version => 20110802164354) do
 
   create_table "places", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,25 @@ ActiveRecord::Schema.define(:version => 20110801151257) do
     t.integer  "num_reviews"
     t.integer  "ranking"
     t.decimal  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "question"
+    t.text     "options"
+    t.integer  "answer"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.integer  "uid"
+    t.string   "pic_square_with_logo"
+    t.string   "profile_url"
+    t.integer  "level_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
