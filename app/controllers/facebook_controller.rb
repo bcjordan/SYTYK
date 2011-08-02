@@ -27,10 +27,15 @@ class FacebookController < ApplicationController
   end
 
   def submit_answer_ajax
-    pp params[:question_id]
-    pp params[:answer_id]
-    pp "Have session." if session[:facebook_session]
+    @question_id = params[:question_id]
+    @answer_id   = params[:answer_id]
+    @question    = Question.find(@question_id)
+    @correct     = @question.answer.to_s == @answer_id
 
+    @answer_element = "$(answer#{@answer_id})"
+    
+    pp @question.answer
+    pp @answer_id
     # Return JS
     #   that shakes answer,
     #   calls 

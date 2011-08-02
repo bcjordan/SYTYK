@@ -12,14 +12,13 @@
     <div onmouseover="new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6',
                                                    restorecolor: '#eceff6'}); return false;"
          onclick="
-            new Effect.Shake(this);
-            new Effect.Highlight(this, { startcolor: '#eceff6', endcolor: '#ffebe8',
-                                                   restorecolor: '#eceff6'});
             new Ajax.Request('/submit_answer_ajax', {
               method: 'get',
               parameters: {question_id: <%= question.id %>, answer_id: <%= answer_id %>}
-              });
-// location.href='/'
-            " class="fbbluebox answer clickable" id="answer<%= answer_id %>"><%= answer_text %></div>
+              });"
+         class="fbbluebox answer clickable"
+         id="answer<%= answer_id %>">
+      <%= answer_text %>
+    </div>
   <% end %>
 </div>
