@@ -83,15 +83,49 @@ h2
  * SYTYK layout styles
  */
 
+/* Place specific (others in Questions) */
+#place-image
+{
+    width: 253px;
+    height: 131px;
+    margin: 0 0 20px;
+}
+
+.response-text
+{
+    float: left;
+    margin-top: 4px;
+    width: 78px;
+}
+
+#yes
+{
+    width: 253px;
+    margin: -1px auto;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#no
+{
+    width: 253px;
+    margin: -1px auto;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+}
+
 /* Questions */
 .question-text
 {
     padding-top: 7px;
     font-size: 19px;
-    text-align: left;
+    text-align: center;
     width: 400px;
     margin: 0 auto;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .question
@@ -105,21 +139,25 @@ h2
     text-align: center;
 }
 
-.question-image img
+#question-image
 {
     width: 400px;
     height: 200px;
-    margin: 20px;
+    margin: 0 0 20px;
 }
 
 #answers
 {
-    width: 342px;
+    width: 407px;
     margin: 0px auto;
     text-align: center;
     height: 98px;
 }
 
+#answers a:hover
+{
+    text-decoration: none;
+}
 .answer
 {
     width: 140px;

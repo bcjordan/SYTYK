@@ -1,25 +1,19 @@
-<% question = Question.last %>
+<% question = @question %>
 
-<div class="question-text">Pop quiz, hot shot! <%= question.question %></div>
+<div class="question-text">Think fast: <%= question.question %></div>
 
 <div class="question-image">
 <%= image_tag question.image_url, :alt => question.question,
-                                  :class => "question-image" if question.image_url %>
+                                  :id => "question-image" if question.image_url %>
 </div>
 
 <div id="answers">
   <% question.options.each do | answer_id, answer_text | %>
     <%= link_to({:controller => 'facebook', :action => 'next_question', :question_id => question.id, :answer_id => answer_id},
                  :update     => 'question', :remote => true) do %>
-<div onmouseover="new Effect.Highlight(this, { startcolor:   '#fff9d7',
-                                                       endcolor:     '#eceff6',
-                                                       restorecolor: '#eceff6'});
-                          return false;"
-             class="fbbluebox answer clickable"
-             id="answer<%= answer_id %>">
+<div onmouseover="new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6', restorecolor: '#eceff6'});
+                          return false;" class="fbbluebox answer clickable" id="answer<%= answer_id %>">
           <%= answer_text %>
-          <%= rand %>
-
           <br/>
 
         </div>

@@ -1,0 +1,12 @@
+<% place = @place %>
+
+<div class="question-text">Have you eaten at <%= place.name %>?</div>
+
+<div class="question-image">
+<%= image_tag place.image_url, :alt => place.name, :id => "place-image" if place.image_url %>
+</div>
+
+<div id="answers">
+  <div id="yes" class=""><div class="response-text" id="yes-text">Yes!</div> <img src="images/stars_stub.png" width=135 height=40/> </div>
+  <div id="no" class=""><div class="response-text" id="no-text">Nope!</div> Seriously.  </div>
+</div>
