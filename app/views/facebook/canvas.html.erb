@@ -16,9 +16,9 @@
     <div class="levellogo"><%= image_tag "http://www.watchmojo.com/blogs/images/tourist.jpg",
       :width => 150, :height => 150 %></div>
     <div class="scores">
-      <div class="score"><span>20</span> places</div>
-      <div class="score"><span>10</span> answers</div>
-      <div class="score"><span>12</span> local buds</div>
+      <div class="score"><div class="score-number">20</div> <div class="score-text">places</div></div>
+      <div class="score"><div class="score-number">3</div> <div class="score-text">answers</div></div>
+      <div class="score"><div class="score-number">5</div> <div class="score-text">local buds</div></div>
     </div>
   </div>
   <div class="fbbluebox profilebox">The next thing below!</div>
@@ -31,7 +31,7 @@
 </div>
 
 <div class="bottom">
-  <div class="fbinfobox">I am in an info box.</div>
+  <div class="fbinfobox">Page loaded in <%= Time.now - @start_time %> ms</div>
   <div class="fbcontentdivider"></div>
   Welcome to So You Think You Know!
   <div class="fbcontentdivider"></div>
