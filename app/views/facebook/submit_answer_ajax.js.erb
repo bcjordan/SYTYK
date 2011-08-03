@@ -1,9 +1,12 @@
+
 <% if @correct %>
     new Effect.Highlight(<%= @answer_element %>, { startcolor:  '#eceff6', endcolor: '#a0f1a1',
                                  restorecolor: '#a0f1a1'});
     location.href='/';
+    return false;
 <% else %>
     new Effect.Highlight(<%= @answer_element %>, { startcolor:   '#eceff6', endcolor: '#ffebe8',
                                  restorecolor: '#eceff6'});
     new Effect.Shake(<%= @answer_element %>);
+    return false;
 <% end %>

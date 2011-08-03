@@ -9,16 +9,20 @@
 
 <div id="answers">
   <% question.options.each do | answer_id, answer_text | %>
-    <div onmouseover="new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6',
-                                                   restorecolor: '#eceff6'}); return false;"
-         onclick="
-            new Ajax.Request('/submit_answer_ajax', {
-              method: 'get',
-              parameters: {question_id: <%= question.id %>, answer_id: <%= answer_id %>}
-              });"
-         class="fbbluebox answer clickable"
-         id="answer<%= answer_id %>">
-      <%= answer_text %>
-    </div>
+    <%= link_to({:controller => 'facebook', :action => 'next_question', :question_id => question.id, :answer_id => answer_id},
+                 :update     => 'question', :remote => true) do %>
+<div onmouseover="new Effect.Highlight(this, { startcolor:   '#fff9d7',
+                                                       endcolor:     '#eceff6',
+                                                       restorecolor: '#eceff6'});
+                          return false;"
+             class="fbbluebox answer clickable"
+             id="answer<%= answer_id %>">
+          <%= answer_text %>
+          <%= rand %>
+
+          <br/>
+
+        </div>
+          <% end %>
   <% end %>
 </div>

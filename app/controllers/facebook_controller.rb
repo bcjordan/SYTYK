@@ -27,18 +27,35 @@ class FacebookController < ApplicationController
   end
 
   def submit_answer_ajax
-    @question_id = params[:question_id]
-    @answer_id   = params[:answer_id]
-    @question    = Question.find(@question_id)
-    @correct     = @question.answer.to_s == @answer_id
 
-    @answer_element = "$(answer#{@answer_id})"
-    
     pp @question.answer
     pp @answer_id
     # Return JS
     #   that shakes answer,
     #   calls 
+  end
+
+  def next_question
+    pp params
+    @question_id = params[:question_id]
+    @answer_id   = params[:answer_id]
+    @question    = Question.find(@question_id)
+    @correct     = @question.answer.to_s == @answer_id
+
+    @answer_element = "answer#{@answer_id}"
+    
+    render(:update) {|page|
+      if (!@correct)
+        page.visual_effect :highlight, @answer_element, :startcolor => "#eceff6", :endcolor => "#ffebe8",
+                                                        :restorecolor => "#eceff6"
+        page.visual_effect :shake, @answer_element
+      else
+        #
+        # Celebrate, update page
+        #
+        page.replace_html 'question', :partial => 'question'
+      end
+    }
   end
 
 end

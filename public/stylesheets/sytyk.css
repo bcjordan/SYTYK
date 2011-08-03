@@ -1,13 +1,15 @@
 /* SYTYK text styles */
 h2
 {
-    font-size: 18px;
+    font-size: 33px;
+    margin-top: -14px;
+    margin-bottom: 8px;
 }
 
 .highlight
 {
-    font-size: 30px;
-    background-color: #fff9d7;
+    font-size: 37px;
+    background-color: #FFF9D7;
 }
 
 .exclaim
@@ -35,7 +37,8 @@ h2
 
 .level
 {
-    font-size: 18px;
+    font-size: 15px;
+    background-color: #FFF9D7;
 }
 
 .profilebox .level
@@ -58,13 +61,14 @@ h2
 .score span
 {
     height: 40px;
-    font-size: 30px;
+    font-size: 33px;
     margin-right: 4px;
 }
 
 .intro
 {
     line-height: 20px;
+    text-align: left;
 }
 
 /*
@@ -75,10 +79,11 @@ h2
 .question-text
 {
     padding-top: 7px;
-    font-size: 20px;
+    font-size: 19px;
     text-align: left;
     width: 400px;
     margin: 0 auto;
+    font-weight: bold;
 }
 
 .question
@@ -112,6 +117,7 @@ h2
     width: 140px;
     margin: 4px;
     float: right;
+    text-align: center;
 }
 
 .clickable
@@ -123,7 +129,7 @@ h2
 .header_pic
 {
     float: left;
-    margin: 8px 12px 0 4px;
+    margin: -4px 12px 0px 0.9px;
 }
 
 /* Profile */
@@ -169,6 +175,7 @@ h2
     font-family: "lucida grande" ,tahoma,verdana,arial,sans-serif;
     font-size: 11px;
     color: #333333;
+    text-align: center;
 }
 /* Default Anchor Style */
 .fbbody a
@@ -177,7 +184,7 @@ h2
     outline-style: none;
     text-decoration: none;
     font-size: 11px;
-    font-weight: bold;
+    font-weight: normal;
 }
 .fbbody a:hover
 {
@@ -203,6 +210,7 @@ h2
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 5px;
+    text-align: left;
 }
 .fbinfobox
 {
