@@ -7,17 +7,22 @@
 </div>
 
 <div id="answers_second">
-
+  <%= link_to({:controller => 'facebook', :action => 'next_place', :place_id => place.id, :been => 'favorite'},
+                 :update     => 'question', :remote => true) do %>
+    <img id="heart" src="/images/icons/heart_add.png" width="20" height="20" style="display: none; margin: 10px; float:right">
+  <% end %>
 <%= link_to({:controller => 'facebook', :action => 'next_place', :place_id => place.id, :been => 'yes'},
                  :update     => 'question', :remote => true) do %>
-  <div  onmouseover="new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6', restorecolor: '#eceff6'}); return false;"
+
+  <div  onmouseover="new Effect.Appear($('heart')); new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6', restorecolor: '#eceff6'}); return false;"
         onclick="new Effect.Highlight(this);return false;"
         class="fbbluebox clickable" id="yes">
     <!--Facebook colors: #3B5998#6D86B7-->
     Yes...
+
   </div>
 <% end %>
-  
+
 <%= link_to({:controller => 'facebook', :action => 'next_place', :place_id => place.id, :been => 'no'},
                  :update     => 'question', :remote => true) do %>
   <div
