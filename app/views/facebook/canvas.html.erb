@@ -27,39 +27,23 @@
         <div class="score-text">places </div></div>
       <div class="score"><img style="cursor: pointer;float:left; margin-top: 12px; margin-right: 3px" src="images/add.png"/><div class="score-number" id="score-answers"><%= @user.answer_score %></div> <div class="score-text">trivia</div></div>
       <div class="score"><img style="cursor: pointer;float:left; margin-top: 12px; margin-right: 3px" src="/images/icons/user_add.png"/><div class="score-number" id="score-friends"><%= @buds_count %></div> <div class="score-text">local buds</div></div>
+      <%= stream_publish "test", @fbuser, "test3" %>
     </div>
   </div>
   <div class="favorites" id="favorites">
     <div class="favheader" id="yourfavorites">Your favorites:</div>
-    <% ['Place one', 'Place two is a place', 'Place three also is a long place'].each do | place | %>
-
-    <div class="favorite" onmouseover="Effect.Appear($('delete-<%= place %>'))"
-                          onmouseout="$('delete-<%= place%>').hide()">
-      <div style="float:left; width:26px; height:26px;">
-      <img id="delete-<%= place %>" style="cursor:pointer;display:none;" src="/images/icons/delete.png"/>
-      </div>
-      <div style="float:left; width:26px; height:26px;">
-        <img id="go-<%= place %>" style="cursor:pointer;" src="/images/icons/heart.png"/>
-      </div>
-      <%= place %>
-    </div>
-  <%end%>
+    <% @faves.each do | been | %>
+        <% @place = Place.find(been.place_id) %>
+        <%= render :partial => 'favorite' if @place %>
+    <%end%>
     <div class="favoritedivider"></div>
   </div>
   <div class="favorites" id="wanttogo">
-    <div class="favheader">Want to go:</div>
-    <% ['My place', 'Sweet place', 'What a nice place'].each do | place | %>
-    <div class="favorite" onmouseover="Effect.Appear($('delete-<%= place %>'))"
-                          onmouseout="$('delete-<%= place%>').hide()">
-        <div style="float:left; width:26px; height:26px;">
-            <img id="delete-<%= place %>" style="cursor:pointer;display:none;" src="/images/icons/delete.png"/>
-        </div>
-        <div style="float:left; width:26px; height:26px;">
-            <img id="go-<%= place %>" style="cursor:pointer;" src="/images/icons/world.png"/>
-        </div>
-      <%= place %>
-    </div>
-    <% end %>
+    <div class="favheader" id="wanttogotext">Want to go:</div>
+    <% @wants.each do | been | %>
+        <% @place = Place.find(been.place_id) %>
+        <%= render :partial => 'want' if @place %>
+    <%end%>
     <div class="favoritedivider"></div>
   </div>
 </div>

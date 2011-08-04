@@ -8,6 +8,8 @@ class FacebookController < ApplicationController
     @fbuser = fbsession.user
     @user   = User.find_or_create_by_facebook_user(@fbuser)
 
+    @faves = @user.beens.where(:favorite => true)
+    @wants = @user.beens.where(:want => true)
     fbsession = session[:facebook_session]
 
     @buds_count    = 0
@@ -104,12 +106,35 @@ class FacebookController < ApplicationController
         page.visual_effect :highlight, "place-#{@place_id}"
       end
 
+      if been.want
+        @place = Place.find(@place_id)
+        page.insert_html :after, 'wanttogotext', :partial => 'want'
+        page.visual_effect :highlight, "place-#{@place_id}"
+      end
+
       # Get a new thing and display it, TODO: helper function
       @place = Place.random
       page.replace_html 'question', :partial => 'place'
     }
   end
 
+  def remove_place
+    render(:update) {|page|
+      fbsession = session[:facebook_session]
+      @fbuser = fbsession.user
+      @user   = User.find_or_create_by_facebook_user(@fbuser)
 
+      been = @user.beens.find_by_place_id(params[:place_id])
+
+      if been
+        been.destroy
+#        TODO: perform hiding
+#        if !@user.beens.exists?(:want => true)
+#          page.visual_effect :hide "place-#{params[:place_id]}"
+#        end
+      end
+      page.remove "place-#{params[:place_id]}"
+    }
+  end
 
 end

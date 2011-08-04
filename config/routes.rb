@@ -10,6 +10,7 @@ SYTYK::Application.routes.draw do
   resources :facebook do
     get 'next_question', :on => :collection
     get 'next_place', :on => :collection
+    get 'remove_place', :on => :collection
   end
   
 #
