@@ -14,10 +14,16 @@ class FacebookController < ApplicationController
 
     @buds_count    = 0
     @friends_count = 0
+    @friends = []
 
     @fbuser.friends.each do |friend|
       @friends_count += 1
-      @buds_count    += 1 if User.exists?(:uid => friend.uid)
+      user_friend = User.find_by_uid(friend.uid)
+      if user_friend
+        @buds_count  += 1
+        @friends << user_friend
+      end
+
       puts "Checking ", friend.uid
     end
 

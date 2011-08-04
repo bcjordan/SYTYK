@@ -6,7 +6,11 @@
 <div class="fbbluebox intro">
   <%= image_tag @user.pic_square_with_logo, :class => "header_pic" %>
   Hey you<% if @name %>, <b><%= @name %><% end %></b><span class="exclaim-mini">!</span>
-  Your friend Kristen is a Boston <span class="level">Social Butterfly</span>. Right now it looks to me like you're a <span class="level">Confused Tourist</span>.
+
+  <% if !@friends.empty? %>
+    Your friend <%=@friends.first.name%> is a Boston <span class="level"><%= @friends.first.level_id %></span>.
+  <% end %>
+  Right now it looks to me like you're a <span class="level">Confused Tourist</span>.
   If you've <em>really</em> been to Boston, prove it<span class="exclaim-mini">!</span>
   <div onclick="Effect.BlindUp(this.parentNode);Effect.Fade(this.parentNode);Effect.Appear($('top-divider'))" style="cursor: pointer; float:right; margin-top: 9px;">
     <img src='/images/icons/cross.png'/>
@@ -67,7 +71,8 @@
   <!--<div class="fbcontentdivider"></div>-->
 
 
-  <div class="fbgreybox">You have <%= @count if @count %> friends... Why don't you <a href="">see if any of them know Boston</a><span class="exclaim-mini">?</span></div>
+  <div class="fbgreybox">You have <%= @friends_count if @friends_count %> friends, but only <%= @buds_count if @buds_count %> know Boston... Why don't you <a style="cursor:pointer" onclick="FB.ui({ method: 'apprequests',
+       message: '<%= @user.no_tourist_message.escape_single_quotes %>' });">see if any of them know Boston</a><span class="exclaim-mini">?</span></div>
 </div>
   
 </div>
