@@ -26,8 +26,8 @@
         <div class="score-number" id="score-places"><%= @user.place_score %></div>
         <div class="score-text">places </div></div>
       <div class="score"><img style="cursor: pointer;float:left; margin-top: 12px; margin-right: 3px" src="images/add.png"/><div class="score-number" id="score-answers"><%= @user.answer_score %></div> <div class="score-text">trivia</div></div>
-      <div class="score"><img style="cursor: pointer;float:left; margin-top: 12px; margin-right: 3px" src="/images/icons/user_add.png"/><div class="score-number" id="score-friends"><%= @buds_count %></div> <div class="score-text">local buds</div></div>
-      <%= stream_publish "test", @fbuser, "test3" %>
+      <div class="score"><img onclick="FB.ui({ method: 'apprequests',
+       message: '<%= @user.no_tourist_message.escape_single_quotes %>' }); " style="cursor: pointer;float:left; margin-top: 12px; margin-right: 3px" src="/images/icons/user_add.png"/><div class="score-number" id="score-friends"><%= @buds_count %></div> <div class="score-text">local buds</div></div>
     </div>
   </div>
   <div class="favorites" id="favorites">

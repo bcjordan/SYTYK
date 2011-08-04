@@ -45,5 +45,15 @@ class User < ActiveRecord::Base
   def place_score
     beens.where(:yes => true).count
   end
-  
+
+  def no_tourist_message
+    "Boston friends, think you know Boston? Help Brian out! Just by being friends with Brian, you're already on your way to PROVING you're no tourist."
+  end
+
+end
+
+class String
+  def escape_single_quotes
+    self.gsub(/'/, "\\\\'")
+  end
 end
