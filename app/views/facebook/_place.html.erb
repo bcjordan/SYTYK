@@ -3,13 +3,13 @@
 <div class="question-text">Have you eaten at <%= place.name %>?</div>
 
 <div class="question-image">
-<%= image_tag place.image_url, :alt => place.name, :id => "place-image" if place.image_url %>
+<%= image_tag place.image_url, :rel => "v:photo", :alt => place.name, :id => "place-image" if place.image_url %>
 </div>
 
 <div id="answers_second">
   <%= link_to({:controller => 'facebook', :action => 'next_place', :place_id => place.id, :been => 'favorite'},
                  :update     => 'question', :remote => true) do %>
-    <img id="heart" src="/images/icons/heart_add.png" width="20" height="20" style="display: none; margin: 10px; float:right">
+    <img id="heart" src="/images/icons/heart_add.png" width="20" height="20" style="border: none; display: none; margin: 10px; float:right">
   <% end %>
 <%= link_to({:controller => 'facebook', :action => 'next_place', :place_id => place.id, :been => 'yes'},
                  :update     => 'question', :remote => true) do %>
@@ -18,7 +18,7 @@
         onclick="new Effect.Highlight(this);return false;"
         class="fbbluebox clickable" id="yes">
     <!--Facebook colors: #3B5998#6D86B7-->
-    Yes...
+    Yes!
 
   </div>
 <% end %>
@@ -26,9 +26,9 @@
 <%= link_to({:controller => 'facebook', :action => 'next_place', :place_id => place.id, :been => 'no'},
                  :update     => 'question', :remote => true) do %>
   <div
-        onmouseover="new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6', restorecolor: '#eceff6'}); return false;"
+        onmouseover="new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6', restorecolor: '#eceff6'}); this.style.cursor='pointer'; return false;"
         onclick="new Effect.Highlight(this);return false;"
-        class="fbbluebox clickable" id="no">
+        class="fbbluebox clickable" style="cursor:pointer" id="no">
     No...
   </div>
 <% end %>
@@ -39,7 +39,7 @@
         onmouseover="new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6', restorecolor: '#eceff6'}); return false;"
         onclick="new Effect.Highlight(this);return false;"
         class="fbbluebox clickable" id="liketo">
-    I'd like to! 
+    I'd like to!
   </div>
 <% end %>
 

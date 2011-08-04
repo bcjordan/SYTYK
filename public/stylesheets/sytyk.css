@@ -86,8 +86,8 @@ h2
 /* Place specific (others in Questions) */
 #place-image
 {
-    width: 253px;
-    height: 131px;
+    width: 275px;
+    height: 225px;
     margin: 0 0 20px;
 }
 
@@ -207,9 +207,40 @@ h2
 /* Profile */
 .profilebox
 {
-    /*width: 250px;*/
+    width: 250px;
     float: right;
     clear: right;
+}
+
+.favorites
+{
+    padding-top: 10px;
+    float: right;
+    clear: right;
+    font-size: 15px;
+    width: 275px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.faveheader
+{
+    
+}
+
+.favorite
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 150px;
+    text-align: left;
+}
+
+.favoritedivider
+{
+    margin: 10px 0 0 0;
+    height: 1px;
+    background-color: #d8dfea;
 }
 
 .levellogo img
