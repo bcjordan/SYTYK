@@ -79,9 +79,11 @@ class FacebookController < ApplicationController
     @been   = params[:been]
 
     been = Been.find_or_create_by_place_id_and_user_id(:place_id => @place_id, :user_id => @user.id)
-    been.yes  = @been == 'yes'
+    been.yes  = (@been == 'yes' || @been == 'favorite')
     been.no   = @been == 'no'
     been.want = @been == 'want'
+    been.favorite = @been == 'favorite'
+    
     been.save
 
     @user.beens << been
@@ -96,11 +98,18 @@ class FacebookController < ApplicationController
         page.visual_effect :highlight, 'score-places'
       end
 
+      if been.favorite
+        @place = Place.find(@place_id)
+        page.insert_html :after, 'yourfavorites', :partial => 'favorite'
+        page.visual_effect :highlight, "place-#{@place_id}"
+      end
+
       # Get a new thing and display it, TODO: helper function
       @place = Place.random
       page.replace_html 'question', :partial => 'place'
     }
   end
+
 
 
 end

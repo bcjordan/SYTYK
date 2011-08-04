@@ -1,0 +1,13 @@
+<% place = @place %>
+
+<div class="favorite" id="place-<%=place.id%>" onmouseover="Effect.Appear($('delete-<%= place.id %>'))"
+                          onmouseout="$('delete-<%= place.id %>').hide()">
+        <div style="float:left; width:26px; height:26px;">
+            <img id="delete-<%= place.id %>" style="cursor:pointer;display:none;" src="/images/icons/delete.png"/>
+        </div>
+        <div style="float:left; width:26px; height:26px;">
+            <img id="go-<%= place.id %>" style="cursor:pointer;" src="/images/icons/heart.png"/>
+        </div>
+      <%= place.name %>
+    </div>
+</div>
