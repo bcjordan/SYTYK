@@ -6,11 +6,12 @@ class User < ActiveRecord::Base
 
   has_many :answers
   has_many :questions, :through => :answers
-  
-#  has_and_belongs_to_many :correct, :class_name => "Question", :join_table => "users_questions"
-#  has_and_belongs_to_many :wrong, :class_name => "Question", :join_table => "users_questions"
 
-  #has_many :wrong, :class_name => "Question"
+  has_many :beens
+  has_many :places, :through => :beens
+
+#  ajaxful_rater
+#  has_many :rates
 
   # Creates a SYTYK User from a facebooker user
   def self.find_or_create_by_facebook_user(facebooker)
@@ -36,4 +37,13 @@ class User < ActiveRecord::Base
     end
 
   end
+
+  def answer_score
+    answers.count(:conditions => {:user_id => id, :correct => true})
+  end
+
+  def place_score
+    beens.where(:yes => true).count
+  end
+  
 end

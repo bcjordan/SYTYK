@@ -13,6 +13,12 @@ gem 'haml'
 
 gem 'sqlite3'
 
+gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
+
+#gem 'ajaxful_rating_jquery',
+#  :git => "git://github.com/kamui/ajaxful_rating_jquery.git",
+#  :require => "ajaxful_rating"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -6,5 +6,7 @@ class Place < ActiveRecord::Base
   # May be less strict with this when allowing for searched items
   validates_presence_of :name, :location_name, :lat, :lng, :url, :image_url, :category, :location_id, :num_reviews, :ranking, :rating
 
-  
+
+  ajaxful_rateable
+
 end

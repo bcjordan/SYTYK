@@ -60,7 +60,7 @@ h2
 
 .score-number
 {
-    text-align: right;
+    text-align: center;
     height: 40px;
     width: 42px;
     font-size: 33px;
@@ -100,8 +100,8 @@ h2
 
 #yes
 {
-    width: 253px;
-    margin: -1px auto;
+    width: 230px;
+    margin: 0 auto;
     text-align: left;
     font-size: 22px;
     font-weight: bold;
@@ -109,11 +109,23 @@ h2
 
 #no
 {
-    width: 253px;
+    width: 50px;
     margin: -1px auto;
     text-align: left;
     font-size: 22px;
     font-weight: bold;
+    float: left;
+}
+
+#liketo
+{
+    width: 161px;
+    margin-top: -1px;
+    margin-left: -40px;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+    float: right
 }
 
 /* Questions */
@@ -122,7 +134,7 @@ h2
     padding-top: 7px;
     font-size: 19px;
     text-align: center;
-    width: 400px;
+    width: 460px;
     margin: 0 auto;
     font-weight: bold;
     margin-bottom: 20px;
@@ -148,7 +160,15 @@ h2
 
 #answers
 {
-    width: 407px;
+    width: 342px;
+    margin: 0px auto;
+    text-align: center;
+    height: 98px;
+}
+
+#answers_second
+{
+    width: 252px;
     margin: 0px auto;
     text-align: center;
     height: 98px;
@@ -158,6 +178,12 @@ h2
 {
     text-decoration: none;
 }
+
+#answers_second a:hover
+{
+    text-decoration: none;
+}
+
 .answer
 {
     width: 140px;
@@ -188,11 +214,11 @@ h2
 
 .levellogo img
 {
-    width: 100px;
-    height: 100px;
+    width: 88px;
+    height: 67px;
     float: right;
     clear: left;
-    margin-right: 10px;
+    margin-right: 13px;
     margin-top: 9px;
 }
 
@@ -212,6 +238,7 @@ h2
 .bottom
 {
     clear: both;
+    padding-top: 15px;
 }
 
 /* FB CSS styles */
@@ -305,3 +332,33 @@ text-decoration: none;
     color: #ffffff;
     cursor: hand;
 }
+
+/* Stars */
+.rating_container {
+    clear:both;
+}
+
+.rating_container a {
+    float:left;
+    display:block;
+    width:25px;
+    height:25px;
+    border:0;
+    background-image:url("/images/rating.gif");
+}
+
+.rating_container a.rating_off {
+    background-position:0 0px;
+}
+
+.rating_container a.rating_half {
+    background-position:0 -25px;
+}
+
+.rating_container a.rating_on {
+    background-position:0 -50px;
+}
+
+.rating_container a.rating_selected {
+    background-position:0 -75px;
+}  

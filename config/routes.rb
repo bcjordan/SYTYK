@@ -8,8 +8,16 @@ SYTYK::Application.routes.draw do
   resources :places
 
   resources :facebook do
-  get 'next_question', :on => :collection
-end
+    get 'next_question', :on => :collection
+    get 'next_place', :on => :collection
+  end
+  
+#
+#  resources :places do
+#    member do
+#      post :rate
+#    end
+#  end
 
   match 'submit_answer_ajax' => 'facebook#submit_answer_ajax'
 

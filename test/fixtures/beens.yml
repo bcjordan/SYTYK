@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  place_id: 1
+  rating: 1
+  yes: false
+  no: false
+  want: false
+  comment: MyString
+
+two:
+  user_id: 1
+  place_id: 1
+  rating: 1
+  yes: false
+  no: false
+  want: false
+  comment: MyString

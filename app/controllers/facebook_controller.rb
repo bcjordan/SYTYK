@@ -7,28 +7,31 @@ class FacebookController < ApplicationController
     fbsession = session[:facebook_session]
     @fbuser = fbsession.user
     @user   = User.find_or_create_by_facebook_user(@fbuser)
-    pp "USER IS ", @user
 
     fbsession = session[:facebook_session]
 
-    @count = 0
+    @buds_count    = 0
+    @friends_count = 0
+
     @fbuser.friends.each do |friend|
-      @count += 1
+      @friends_count += 1
+      @buds_count    += 1 if User.exists?(:uid => friend.uid)
+      puts "Checking ", friend.uid
     end
 
     @name = @user.name
     @pic  = @user.pic_square_with_logo
 
-    q = Question.random
-    @question = q unless Answer.exists?(:question_id => q.id, :user_id => @user.id)
+    @question = Question.random
+    @question = nil if Answer.exists?(:question_id => @question.id, :user_id => @user.id)
     @place = Place.random
   end
 
   def next_question
-        fbsession = session[:facebook_session]
+    fbsession = session[:facebook_session]
     @fbuser = fbsession.user
     @user   = User.find_or_create_by_facebook_user(@fbuser)
-    pp params
+    
     @question_id = params[:question_id]
     @answer_id   = params[:answer_id]
     @question    = Question.find(@question_id)
@@ -48,18 +51,56 @@ class FacebookController < ApplicationController
                                                         :restorecolor => "#eceff6"
         page.visual_effect :shake, @answer_element
       else
-
         unless already_answered
           @user.answers << Answer.create(:question_id => @question_id, :user_id => @user.id, :correct => true)
-          user_score = @user.answers.count(:conditions => {:user_id => @user.id, :correct => true})
-          page.replace_html 'score-answers', user_score
+          answer_score = @user.answer_score
+          page.replace_html 'score-answers', answer_score
           page.visual_effect :highlight, 'score-answers'
         end
-
+        
         @question = Question.random
-        page.replace_html 'question', :partial => 'question'
+        @question = nil if Answer.exists?(:question_id => @question.id, :user_id => @user.id)
+        @place = Place.random
+        if !@question
+          page.replace_html 'question', :partial => 'place'
+        else
+          page.replace_html 'question', :partial => 'question'
+        end
       end
     }
   end
+
+  def next_place
+    fbsession = session[:facebook_session]
+    @fbuser = fbsession.user
+    @user   = User.find_or_create_by_facebook_user(@fbuser)
+
+    @place_id  = params[:place_id]
+    @been   = params[:been]
+
+    been = Been.find_or_create_by_place_id_and_user_id(:place_id => @place_id, :user_id => @user.id)
+    been.yes  = @been == 'yes'
+    been.no   = @been == 'no'
+    been.want = @been == 'want'
+    been.save
+
+    @user.beens << been
+
+    if been.yes
+      score = @user.place_score
+    end
+
+    render(:update) {|page|
+      if score
+        page.replace_html 'score-places', score.to_s
+        page.visual_effect :highlight, 'score-places'
+      end
+
+      # Get a new thing and display it, TODO: helper function
+      @place = Place.random
+      page.replace_html 'question', :partial => 'place'
+    }
+  end
+
 
 end

@@ -16,12 +16,18 @@
     <div class="levellogo"><%= image_tag "http://www.watchmojo.com/blogs/images/tourist.jpg",
       :width => 150, :height => 150 %></div>
     <div class="scores">
-      <div class="score"><div class="score-number" id="score-places">20</div> <div class="score-text">places</div></div>
-      <div class="score"><div class="score-number" id="score-answers">3</div> <div class="score-text">answers</div></div>
-      <div class="score"><div class="score-number" id="score-friends">5</div> <div class="score-text">local buds</div></div>
+      <div class="score"><img style="float:left; margin-top: 12px; margin-right: 3px" src="images/add.png"/><div class="score-number" id="score-places"><%= @user.place_score %></div> <div class="score-text">places</div></div>
+      <div class="score"><img style="float:left; margin-top: 12px; margin-right: 3px" src="images/add.png"/><div class="score-number" id="score-answers"><%= @user.answer_score %></div> <div class="score-text">answers</div></div>
+      <div class="score"><img onmouseover="new Effect.Fade(this, { duration:1})" style="float:left; margin-top: 12px; margin-right: 3px" src="images/add.png"/><div class="score-number" id="score-friends"><%= @buds_count %></div> <div class="score-text">local buds</div></div>
     </div>
   </div>
-  <div class="fbbluebox profilebox">The next thing below!</div>
+  <div class="fbgreybox profilebox2"></div>
+  <div class="fbcontentdivider"></div>
+  Woot
+  <div class="fbcontentdivider"></div>
+  Okay
+  <div class="fbcontentdivider"></div>
+  <div class="fbcontentdivider"></div>
 </div>
 
 <div id="left">
@@ -30,12 +36,19 @@
         <%= render :partial => "question", :locals => { :user => @user, :fbuser => @fbuser, :number => 1 } %>
       </div>
   <% elsif @place %>
-      <div class="place" id="place">
+      <div class="question" id="question">
         <%= render :partial => "place", :locals => { :user => @user, :fbuser => @fbuser, :number => 1 } %>
       </div>
   <% end %>
 </div>
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <div class="bottom">
   <div class="fbinfobox">Page loaded in <%= Time.now - @start_time %> ms</div>
   <div class="fbcontentdivider"></div>
