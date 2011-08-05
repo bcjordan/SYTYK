@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
       if !@user
         puts "User not created!"
         @user = User.new(:name                 => facebooker.name,
-                         :uid                  => facebooker.uid,
+                         :uid                  => facebooker.uid.to_s,
                          :pic_square_with_logo => facebooker.pic_square_with_logo,
                          :profile_url          => facebooker.profile_url,
                          :level_id             => 1,
