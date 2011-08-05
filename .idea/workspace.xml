@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/facebook_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
     </list>
     <ignored path="SYTYK.iws" />
@@ -86,7 +85,7 @@
           <file leaf-file-name="facebook_controller.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="25" selection-start="137" selection-end="137" vertical-scroll-proportion="0.14876033">
+                <state line="9" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.17355372">
                   <folding />
                 </state>
               </provider>
@@ -830,7 +829,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="137" selection-end="137" vertical-scroll-proportion="0.14876033">
+        <state line="9" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.17355372">
           <folding />
         </state>
       </provider>
