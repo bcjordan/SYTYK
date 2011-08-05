@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/facebook_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
     </list>
     <ignored path="SYTYK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,10 +82,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="facebook_controller.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="facebook_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="35" column="33" selection-start="788" selection-end="788" vertical-scroll-proportion="0.33333334">
+                <state line="38" column="22" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -100,10 +100,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="0" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
+                <state line="5" column="96" selection-start="300" selection-end="300" vertical-scroll-proportion="0.081190795">
                   <folding />
                 </state>
               </provider>
@@ -157,12 +157,12 @@
         <option value="$PROJECT_DIR$/app/views/facebook/first_fb.html.erb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/facebook/canvas.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/facebook/_place.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/facebook/_want.html.erb" />
         <option value="$PROJECT_DIR$/app/views/facebook/_favorite.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -813,9 +813,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
+        <state line="38" column="22" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -827,9 +827,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="33" selection-start="788" selection-end="788" vertical-scroll-proportion="0.33333334">
+        <state line="5" column="96" selection-start="300" selection-end="300" vertical-scroll-proportion="0.081190795">
           <folding />
         </state>
       </provider>
