@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="" />
+    <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20110805130056_change_user_uid_type.rb" afterPath="$PROJECT_DIR$/db/migrate/20110805130056_change_user_uid_type.rb" />
+    </list>
     <ignored path="SYTYK.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -110,7 +112,7 @@
           <file leaf-file-name="20110805130056_change_user_uid_type.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/db/migrate/20110805130056_change_user_uid_type.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="40" selection-start="165" selection-end="165" vertical-scroll-proportion="0.101123594">
+                <state line="2" column="39" selection-start="103" selection-end="103" vertical-scroll-proportion="0.033707865">
                   <folding />
                 </state>
               </provider>
@@ -841,7 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20110805130056_change_user_uid_type.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="40" selection-start="165" selection-end="165" vertical-scroll-proportion="0.101123594">
+        <state line="2" column="39" selection-start="103" selection-end="103" vertical-scroll-proportion="0.033707865">
           <folding />
         </state>
       </provider>
