@@ -67,28 +67,19 @@
           <file leaf-file-name="canvas.html.erb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/facebook/canvas.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="29" selection-start="231" selection-end="231" vertical-scroll-proportion="-3.125">
+                <state line="14" column="72" selection-start="790" selection-end="791" vertical-scroll-proportion="-8.75">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="facebook_controller.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="facebook_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.34710744">
+                <state line="17" column="4" selection-start="487" selection-end="581" vertical-scroll-proportion="0.0">
                   <folding>
                     <marker date="1312516080000" expanded="true" signature="169:348" placeholder="if ... end" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="controller.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vendor/plugins/facebooker/lib/facebooker/rails/controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="312" column="30" selection-start="11524" selection-end="11524" vertical-scroll-proportion="-8.5">
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -102,19 +93,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="60" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="39" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
+                <state line="12" column="5" selection-start="476" selection-end="476" vertical-scroll-proportion="0.19485791">
                   <folding />
                 </state>
               </provider>
@@ -768,49 +750,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="39" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/facebook/_place.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="40" selection-start="1352" selection-end="1352" vertical-scroll-proportion="-16.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/facebook/_favorite.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="878" selection-end="878" vertical-scroll-proportion="-9.142858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/facebook/_want.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="689" selection-end="689" vertical-scroll-proportion="-6.285714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="14" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/facebook/canvas.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="231" selection-end="231" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="60" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+        <state line="33" column="39" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.19008264">
           <folding />
         </state>
       </provider>
@@ -824,17 +764,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/facebooker/lib/facebooker/rails/controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="30" selection-start="11524" selection-end="11524" vertical-scroll-proportion="-8.5">
+        <state line="313" column="30" selection-start="11561" selection-end="11583" vertical-scroll-proportion="0.33285713">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.34710744">
+        <state line="17" column="4" selection-start="487" selection-end="581" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1312516080000" expanded="true" signature="169:348" placeholder="if ... end" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/facebook/canvas.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="72" selection-start="790" selection-end="791" vertical-scroll-proportion="-8.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="14" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/facebook/_want.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="689" selection-end="689" vertical-scroll-proportion="-6.285714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/facebook/_favorite.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="878" selection-end="878" vertical-scroll-proportion="-9.142858">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/facebook/_place.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="40" selection-start="1352" selection-end="1352" vertical-scroll-proportion="-16.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="5" selection-start="476" selection-end="476" vertical-scroll-proportion="0.19485791">
+          <folding />
         </state>
       </provider>
     </entry>
