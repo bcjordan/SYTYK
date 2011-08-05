@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   # Creates a SYTYK User from a facebooker user
   def self.find_or_create_by_facebook_user(facebooker)
-    @user = User.find_by_uid facebooker.uid
+    @user = User.find_by_uid facebooker.uid.to_s
     begin
       if !@user
         puts "User not created!"

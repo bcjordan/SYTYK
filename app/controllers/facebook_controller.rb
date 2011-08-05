@@ -34,7 +34,7 @@ class FacebookController < ApplicationController
 
     @fbuser.friends.each do |friend|
       @friends_count += 1
-      user_friend = User.find_by_uid(friend.uid)
+      user_friend = User.find_by_uid(friend.uid.to_s)
       if user_friend
         @buds_count  += 1
         @friends << user_friend
