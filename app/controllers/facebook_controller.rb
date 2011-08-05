@@ -4,6 +4,10 @@ class FacebookController < ApplicationController
   ensure_authenticated_to_facebook
 
   def canvas
+    if params[:installed]
+      redirect_to 'http://apps.facebook.com/soyouthinkyouknow/'
+    end
+
     fbsession = session[:facebook_session]
     @fbuser = fbsession.user
     @user   = User.find_or_create_by_facebook_user(@fbuser)
