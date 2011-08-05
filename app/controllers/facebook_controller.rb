@@ -83,6 +83,7 @@ class FacebookController < ApplicationController
           answer_score = @user.answer_score
           page.replace_html 'score-answers', answer_score
           page.visual_effect :highlight, 'score-answers'
+          update_level(page, @user)
         end
         
         @question = Question.random
@@ -94,6 +95,21 @@ class FacebookController < ApplicationController
           page.replace_html 'question', :partial => 'question'
         end
       end
+    }
+  end
+
+  def a_question
+    render(:update) {|page|
+
+      fbsession = session[:facebook_session]
+      @fbuser = fbsession.user
+      @user   = User.find_or_create_by_facebook_user(@fbuser)
+
+      @question = Question.random
+
+      page.replace_html 'question', :partial => 'question'
+
+
     }
   end
 
@@ -167,6 +183,13 @@ class FacebookController < ApplicationController
     raise Facebooker::Session::SessionExpired
   end
 
+  def clear_everything
+    User.destroy_all
+    Answer.destroy_all
+    Been.destroy_all
+
+  end
+
   
   def update_level page, user
     answers = user.answer_score
@@ -185,7 +208,11 @@ class FacebookController < ApplicationController
     orig_level = user.level_id
 
     if answers < 2 && places < 3
-      user.level_id = Level.find_by_name("Confused Tourist").id if Level.find_by_name("Confused Tourist")
+      if friend_count > 0
+        user.level_id = Level.find_by_name("Visiting Friend").id if Level.find_by_name("Visiting Friend")
+      else
+        user.level_id = Level.find_by_name("Confused Tourist").id if Level.find_by_name("Confused Tourist")
+      end
     elsif places > 15 && friend_count < 1
       user.level_id = Level.find_by_name("Forever Alone").id if Level.find_by_name("Forever Alone")
     elsif places > 10

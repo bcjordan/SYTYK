@@ -10,7 +10,7 @@
   <% if !@friends.empty? %>
     Your friend <%=@friends.first.name%> is a Boston <span class="level"><%= @friends.first.level.name %></span>.
   <% end %>
-  Right now it looks to me like you're a <span class="level" id="level_header">Confused Tourist</span>.
+  Right now it looks to me like you're a <span class="level" id="level_header"><%= @user.level.name %></span>.
   If you've <em>really</em> been to Boston, prove it<span class="exclaim-mini">!</span>
   <div onclick="Effect.BlindUp(this.parentNode);Effect.Fade(this.parentNode);Effect.Appear($('top-divider'))" style="cursor: pointer; float:right; margin-top: 9px;">
     <img src='/images/icons/cross.png'/>
@@ -26,10 +26,14 @@
       :width => 150, :height => 150, :alt => @user.level.description %></div>
     <div class="scores">
       <div class="score">
-        <img style="cursor: pointer; float:left; margin-top: 12px; margin-right: 3px" src="images/add.png"/>
+        <img style="cursor: pointer; float:left; margin-top: 12px; margin-right: 3px;" border=0 src="images/add.png"/>
         <div class="score-number" id="score-places"><%= @user.place_score %></div>
         <div class="score-text">places </div></div>
-      <div class="score"><img style="cursor: pointer;float:left; margin-top: 12px; margin-right: 3px" src="images/add.png"/><div class="score-number" id="score-answers"><%= @user.answer_score %></div> <div class="score-text">trivia</div></div>
+      <div class="score">
+        <%= link_to({:controller => 'facebook', :action => 'a_question' }, :remote => true) do %>
+            <img style="cursor: pointer;float:left; margin-top: 12px; margin-right: 3px" src="images/add.png" border="0"/>
+        <% end %>
+        <div class="score-number" id="score-answers"><%= @user.answer_score %></div> <div class="score-text">trivia</div></div>
       <div class="score"><img onclick="FB.ui({ method: 'apprequests',
        message: '<%= @user.no_tourist_message.escape_single_quotes %>' }); " style="cursor: pointer;float:left; margin-top: 12px; margin-right: 3px" src="/images/icons/user_add.png"/><div class="score-number" id="score-friends"><%= @buds_count %></div> <div class="score-text">local buds</div></div>
     </div>
@@ -77,7 +81,10 @@
     <!--<div class="fbcontentdivider"></div>-->
 </div>
   
-  <div class="fbinfobox" style="display:none" id="debug">Page loaded in <%= Time.now - @start_time %> ms. <a href="/facebook/first_fb">Reset your session</a></div>
+  <div class="fbinfobox" style="display:none" id="debug">Page loaded in <%= Time.now - @start_time %> ms. <a href="/facebook/first_fb">Reset your session</a>.
+
+    <%= link_to({:controller => 'facebook', :action => 'clear_everything' }, :remote => true) do %> Clear everything <% end %>
+    .</div>
 
 
 </div>
