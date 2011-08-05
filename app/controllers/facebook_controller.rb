@@ -5,8 +5,8 @@ class FacebookController < ApplicationController
 
   def canvas
     if params[:installed]
-      redirect_to 'http://apps.facebook.com/soyouthinkyouknow/'
-    elsif ! (params[:ref] == 'bookmarks')
+      redirect_to 'http://apps.facebook.com/soyouthinkyouknow/?reset=1'
+    elsif !params[:reset]
       raise Facebooker::Session::SessionExpired
     end
 

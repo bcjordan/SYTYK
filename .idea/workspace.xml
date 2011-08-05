@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/facebook_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
     </list>
     <ignored path="SYTYK.iws" />
@@ -82,10 +83,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="facebook_controller.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="facebook_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.17355372">
+                <state line="9" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -100,10 +101,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="52" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
+                <state line="13" column="0" selection-start="539" selection-end="539" vertical-scroll-proportion="0.21109608">
                   <folding />
                 </state>
               </provider>
@@ -161,8 +162,8 @@
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/facebook/_want.html.erb" />
         <option value="$PROJECT_DIR$/app/views/facebook/_favorite.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -813,6 +814,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="0" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.0">
@@ -822,14 +830,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="52" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.17355372">
+        <state line="13" column="0" selection-start="539" selection-end="539" vertical-scroll-proportion="0.21109608">
           <folding />
         </state>
       </provider>
