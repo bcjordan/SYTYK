@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     clear_facebook_session_information
     reset_session
     flash[:error] = "Your facebook session has expired."
-    redirect_to "http://0.0.0.0:3000/?reset=1"
+    redirect_to "https://soyouthinkyouknow.heroku.com/?reset=1"
   end
 
   def init
