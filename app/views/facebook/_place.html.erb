@@ -14,7 +14,7 @@
 <%= link_to({:controller => 'facebook', :action => 'next_place', :place_id => place.id, :been => 'yes'},
                  :update     => 'question', :remote => true) do %>
 
-  <div  onmouseover="new Effect.Appear($('heart')); new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6', restorecolor: '#eceff6'}); return false;"
+  <div  onmouseover="new Effect.Appear($('heart'), {duration:.3}); new Effect.Highlight(this, { startcolor: '#fff9d7', endcolor: '#eceff6', restorecolor: '#eceff6'}); return false;"
         onclick="new Effect.Highlight(this);return false;"
         class="fbbluebox clickable" id="yes">
     <!--Facebook colors: #3B5998#6D86B7-->
