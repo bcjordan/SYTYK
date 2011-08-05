@@ -1,6 +1,6 @@
 <% place = @place %>
 
-<div class="favorite" style="cursor:pointer" id="place-<%=place.id%>" onmousemove="Effect.Appear($('delete-<%= place.id %>'), {duration:.3})"
+<div class="favorite" style="cursor:pointer" id="place-<%=place.id%>" onmouseover="Effect.Appear($('delete-<%= place.id %>'), {duration:.3})"
                           onmouseout="$('delete-<%= place.id %>').hide()"
                             onclick="">
         <div style="float:left; width:26px; height:26px;">

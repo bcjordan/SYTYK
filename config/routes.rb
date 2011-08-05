@@ -1,11 +1,11 @@
 SYTYK::Application.routes.draw do
-  resources :levels
+  resources :levels unless ENV['RAILS_ENV'] == 'production'
 
-  resources :questions
+  resources :questions unless ENV['RAILS_ENV'] == 'production'
 
-  resources :users
+  resources :users unless ENV['RAILS_ENV'] == 'production'
 
-  resources :places
+  resources :places unless ENV['RAILS_ENV'] == 'production'
 
   resources :facebook do
     get 'next_question', :on => :collection
