@@ -1,0 +1,8 @@
+Unfortunately, it didn't work.
+<a style="cursor:pointer" onclick="FB.ui({ method: 'feed', message: 'Facebook for Websites is super-cool'});">
+    nice!</a>
+
+<%= session[:facebook_session].to_json %>
+<script>FB.Event.subscribe('auth.login', function(response) {
+
+window.location.reload(); }); FB.Event.subscribe('auth.logout', function(response) { window.location.reload(); });</script>

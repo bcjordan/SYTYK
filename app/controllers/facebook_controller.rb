@@ -8,6 +8,13 @@ class FacebookController < ApplicationController
     @fbuser = fbsession.user
     @user   = User.find_or_create_by_facebook_user(@fbuser)
 
+    begin
+      @fbuser.friends
+    rescue
+      raise Facebooker::Session::SessionExpired
+    end
+
+
     @faves = @user.beens.where(:favorite => true)
     @wants = @user.beens.where(:want => true)
     fbsession = session[:facebook_session]
@@ -15,6 +22,8 @@ class FacebookController < ApplicationController
     @buds_count    = 0
     @friends_count = 0
     @friends = []
+
+
 
     @fbuser.friends.each do |friend|
       @friends_count += 1
@@ -143,4 +152,7 @@ class FacebookController < ApplicationController
     }
   end
 
+  def first_fb
+    raise Facebooker::Session::SessionExpired
+  end
 end

@@ -72,7 +72,15 @@
 
 
   <div class="fbgreybox">You have <%= @friends_count if @friends_count %> friends, but only <%= @buds_count if @buds_count %> know Boston... Why don't you <a style="cursor:pointer" onclick="FB.ui({ method: 'apprequests',
-       message: '<%= @user.no_tourist_message.escape_single_quotes %>' });">see if any of them know Boston</a><span class="exclaim-mini">?</span></div>
+       message: '<%= @user.no_tourist_message.escape_single_quotes %>' });">see if any of them know Boston</a><span class="exclaim-mini">?</span>
+
+    Or, for giggles,
+    <a style="cursor:pointer" onclick="FB.ui({ method: 'feed', message: 'Facebook for Websites is super-cool'});">
+    click here!</a>
+
+    <a href="/facebook/first_fb">Reset your session</a>
+
+  </div>
 </div>
   
 </div>

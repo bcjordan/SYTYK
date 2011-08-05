@@ -4,12 +4,12 @@
                           onmouseout="$('delete-<%= place.id %>').hide()">
         <div style="float:left; width:26px; height:26px;">
           <%= link_to({:controller => 'facebook', :action => 'remove_place', :place_id => place.id }, :remote => true) do %>
-            <img id="delete-<%= place.id %>" style="cursor:pointer;display:none;" src="/images/icons/delete.png"/>
+            <img id="delete-<%= place.id %>" style="border:none;cursor:pointer;display:none;" src="/images/icons/delete.png"/>
           <% end %>
         </div>
         <div style="float:left; width:26px; height:26px;">
             <%= link_to place.url, :target => "_new" do %>
-              <img id="go-<%= place.id %>" style="cursor:pointer;" src="/images/icons/heart.png"/>
+              <img id="go-<%= place.id %>" style="border:none;cursor:pointer;" src="/images/icons/heart.png"/>
             <%end%>
         </div>
       <%= place.name %>

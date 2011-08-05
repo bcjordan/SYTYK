@@ -11,6 +11,7 @@ SYTYK::Application.routes.draw do
     get 'next_question', :on => :collection
     get 'next_place', :on => :collection
     get 'remove_place', :on => :collection
+    get 'first_fb', :on=> :collection
   end
   
 #
