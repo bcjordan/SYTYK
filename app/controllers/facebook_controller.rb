@@ -33,7 +33,7 @@ class FacebookController < ApplicationController
         @friends << user_friend
       end
 
-      puts "Checking ", friend.uid
+      puts "Checking #{friend.uid}"
     end
 
     @name = @user.name
