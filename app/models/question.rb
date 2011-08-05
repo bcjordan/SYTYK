@@ -11,5 +11,7 @@ end
 class Question < ActiveRecord::Base
   attr_accessible :question, :options, :answer, :image_url
 
+  validates_uniqueness_of :question  
+
   serialize :options
 end

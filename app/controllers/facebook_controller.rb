@@ -1,6 +1,7 @@
 require 'pp'
 
 class FacebookController < ApplicationController
+  helper_method :update_level, :next_question
   ensure_authenticated_to_facebook
   #ensure_application_is_installed_by_facebook_user
 
@@ -42,6 +43,8 @@ class FacebookController < ApplicationController
 
       puts "Checking #{friend.uid}"
     end
+
+    session[:friends_count] = @friends_count
 
     @name = @user.name
     @pic  = @user.pic_square_with_logo
@@ -137,6 +140,7 @@ class FacebookController < ApplicationController
       # Get a new thing and display it, TODO: helper function
       @place = Place.random
       page.replace_html 'question', :partial => 'place'
+      update_level(page, @user)
     }
   end
 
@@ -161,5 +165,44 @@ class FacebookController < ApplicationController
 
   def first_fb
     raise Facebooker::Session::SessionExpired
+  end
+
+  
+  def update_level page, user
+    answers = user.answer_score
+    places = user.place_score
+
+    ## Get friend count by passing facebook user
+    fbsession = session[:facebook_session]
+    @fbuser = fbsession.user
+    if !session[:friends_count]
+      friend_count = user.friend_count @fbuser
+      session[:friends_count] = friend_count
+    else
+      friend_count = session[:friends_count]
+    end
+
+    orig_level = user.level_id
+
+    if answers < 2 && places < 3
+      user.level_id = Level.find_by_name("Confused Tourist").id if Level.find_by_name("Confused Tourist")
+    elsif places > 15 && friend_count < 1
+      user.level_id = Level.find_by_name("Forever Alone").id if Level.find_by_name("Forever Alone")
+    elsif places > 10
+      user.level_id = Level.find_by_name("Savvy Tourist").id if Level.find_by_name("Savvy Tourist")
+    elsif answers >= 2 && places < 10
+      user.level_id = Level.find_by_name("Quizmaster").id if Level.find_by_name("Quizmaster")
+
+    end
+
+    if orig_level != user.level_id
+      user.save
+      ## TODO: highlight these
+      page.replace_html 'level_header', user.level.name
+      page.replace_html 'level_name', user.level.name
+      page.replace_html 'level_logo', "<img src='" + user.level.image_url + "'/>"
+      page.visual_effect :highlight, 'profilebox'
+
+    end ## Otherwise, assert level is the same
   end
 end

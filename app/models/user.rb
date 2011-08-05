@@ -50,6 +50,19 @@ class User < ActiveRecord::Base
     "Boston friends, think you know Boston? Help Brian out! Just by being friends with Brian, you're already on your way to PROVING you're no tourist."
   end
 
+  def friend_count fb_user
+    if !@buds_count
+      @buds_count = 0
+      fb_user.friends.each do |friend|
+        user_friend = User.find_by_uid(friend.uid.to_s)
+        if user_friend
+          @buds_count  += 1
+        end
+      end
+    end
+    
+    @buds_count
+  end
 end
 
 class String

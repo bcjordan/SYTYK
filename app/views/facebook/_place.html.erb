@@ -1,9 +1,14 @@
 <% place = @place %>
 
-<div class="question-text">Have you eaten at <%= place.name %>?</div>
+<div class="question-text">Have you eaten at <span style="cursor:pointer" onclick="window.open('<%= place.url %>', '_blank')"> <%= place.name %></span>?</div>
 
 <div class="question-image">
-<%= image_tag place.image_url, :rel => "v:photo", :alt => place.name, :id => "place-image" if place.image_url %>
+  <% if place.image_url && place.lat != 0.0 %>
+    <%= image_tag place.image_url, :rel => "v:photo", :alt => place.name, :id => "place-image", :onmouseover => "this.src='#{place.map_img}'",
+              :onmouseout => "this.src='#{place.image_url}'", :onclick => "window.open('#{place.url}', '_blank')"  %>
+  <% else %>
+  <%= image_tag place.image_url, :rel => "v:photo", :alt => place.name, :id => "place-image", :onclick => "window.open('#{place.url}', '_blank')" %>
+  <% end %>
 </div>
 
 <div id="answers_second">
@@ -42,6 +47,8 @@
     I'd like to!
   </div>
 <% end %>
+
+<!--<img style="float:left; margin-top: 15px" src="http://maps.googleapis.com/maps/api/staticmap?center=<%= place.lat %>,<%= place.lng %>&zoom=14&size=252x200&maptype=roadmap&sensor=false"/ >-->
 
 
 </div>

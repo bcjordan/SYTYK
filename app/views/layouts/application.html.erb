@@ -26,12 +26,14 @@
   
 
   <body class="fbbody" onload="initialize()">
+  <% if ENV['RAILS_ENV'] == 'production' %>
   <script>
     var isInIFrame = (window.location != window.parent.location) ? true : false;
           if (!isInIFrame) {
               window.location = "http://apps.facebook.com/soyouthinkyouknow/"
           }
   </script>
+  <% end %>
   <div id="map_canvas" style="width: 50%; height: 50%; float: left;"></div>
     <div id="fb-root"></div>
   

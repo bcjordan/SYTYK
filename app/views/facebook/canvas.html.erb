@@ -10,7 +10,7 @@
   <% if !@friends.empty? %>
     Your friend <%=@friends.first.name%> is a Boston <span class="level"><%= @friends.first.level.name %></span>.
   <% end %>
-  Right now it looks to me like you're a <span class="level">Confused Tourist</span>.
+  Right now it looks to me like you're a <span class="level" id="level_header">Confused Tourist</span>.
   If you've <em>really</em> been to Boston, prove it<span class="exclaim-mini">!</span>
   <div onclick="Effect.BlindUp(this.parentNode);Effect.Fade(this.parentNode);Effect.Appear($('top-divider'))" style="cursor: pointer; float:right; margin-top: 9px;">
     <img src='/images/icons/cross.png'/>
@@ -20,9 +20,9 @@
 
 
 <div id="right">
-  <div class="fbgreybox profilebox">
-    <div class="whatyouare">You are a: <span class="level"><%= @user.level.name %></span></div>
-    <div class="levellogo"><%= image_tag @user.level.image_url,
+  <div class="fbgreybox profilebox" id="profilebox">
+    <div class="whatyouare">You are a: <span class="level" id="level_name"><%= @user.level.name %></span></div>
+    <div class="levellogo" id="level_logo"><%= image_tag @user.level.image_url,
       :width => 150, :height => 150, :alt => @user.level.description %></div>
     <div class="scores">
       <div class="score">
@@ -65,22 +65,21 @@
 </div>
   
 <div class="bottom">
-  <!--<div class="fbinfobox">Page loaded in <%= Time.now - @start_time %> ms</div>-->
   <!--<div class="fbcontentdivider"></div>-->
   <!--Thanks for playing! -->
-  <!--<div class="fbcontentdivider"></div>-->
 
 
-  <div class="fbgreybox">You have <%= @friends_count if @friends_count %> friends, but only <%= @buds_count if @buds_count %> know Boston... Why don't you <a style="cursor:pointer" onclick="FB.ui({ method: 'apprequests',
-       message: '<%= @user.no_tourist_message.escape_single_quotes %>' });">see if any of them know Boston</a><span class="exclaim-mini">?</span>
+  <div class="fbgreybox" onclick="$('debug').show()">Of your <%= @friends_count if @friends_count %> friends, <%= @buds_count if @buds_count %> proved they know Boston... Why don't you <a style="cursor:pointer" onclick="FB.ui({ method: 'apprequests',
+       message: '<%= @user.no_tourist_message.escape_single_quotes %>' });">see if any of your other friends know Boston</a><span class="exclaim-mini">?</span>
 
-    Or, for giggles,
-    <a style="cursor:pointer" onclick="FB.ui({ method: 'feed', message: 'Facebook for Websites is super-cool'});">
-    click here!</a>
+    <!--<a style="cursor:pointer" onclick="FB.ui({ method: 'feed', message: 'Facebook for Websites is super-cool'});">-->
+    <!--click here!</a>-->
+    <!--<div class="fbcontentdivider"></div>-->
+</div>
+  
+  <div class="fbinfobox" style="display:none" id="debug">Page loaded in <%= Time.now - @start_time %> ms. <a href="/facebook/first_fb">Reset your session</a></div>
 
-    <a href="/facebook/first_fb">Reset your session</a>
 
-  </div>
 </div>
 
 </div>

@@ -89,6 +89,7 @@ h2
     width: 275px;
     height: 225px;
     margin: 0 0 20px;
+    cursor: pointer;
 }
 
 .response-text

@@ -2,8 +2,8 @@
 
 <div class="question-text">Think fast: <%= @question.question %></div>
 
-<div class="question-image">
-<%= image_tag question.image_url, :alt => @question.question,
+<div class="question-image" rel="v:photo">
+<%= image_tag question.image_url, :rel => "v:photo", :alt => @question.question,
                                   :id => "question-image" if question.image_url %>
 </div>
 
