@@ -1,7 +1,8 @@
 require 'pp'
 
 class FacebookController < ApplicationController
-  ensure_authenticated_to_facebook
+  #ensure_authenticated_to_facebook
+  ensure_application_is_installed_by_facebook_user
 
   def canvas
     if params[:installed]
