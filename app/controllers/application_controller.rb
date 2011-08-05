@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery :except => :canvas
   before_filter :init
 
-  rescue_from Facebooker::Session::SessionExpired, :with => :facebook_session_expired
-  rescue_from Facebooker::Session::MissingOrInvalidParameter, :with => :facebook_session_expired
+#  rescue_from Facebooker::Session::SessionExpired, :with => :facebook_session_expired
+#  rescue_from Facebooker::Session::MissingOrInvalidParameter, :with => :facebook_session_expired
 
   def facebook_session_expired
     clear_fb_cookies!
