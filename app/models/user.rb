@@ -2,13 +2,13 @@ require 'pp'
 class User < ActiveRecord::Base
   attr_accessible :name, :uid, :pic_square_with_logo, :profile_url, :level_id
 
-  has_one :level
-
   has_many :answers
   has_many :questions, :through => :answers
 
   has_many :beens
   has_many :places, :through => :beens
+
+  belongs_to :level
 
 #  ajaxful_rater
 #  has_many :rates
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
                          :uid                  => facebooker.uid,
                          :pic_square_with_logo => facebooker.pic_square_with_logo,
                          :profile_url          => facebooker.profile_url,
-                         :level_id             => 0,
+                         :level_id             => 1,
                          :right                => [],
                          :want_to_go           => [])
       end

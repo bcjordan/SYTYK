@@ -8,7 +8,7 @@
   Hey you<% if @name %>, <b><%= @name %><% end %></b><span class="exclaim-mini">!</span>
 
   <% if !@friends.empty? %>
-    Your friend <%=@friends.first.name%> is a Boston <span class="level"><%= @friends.first.level_id %></span>.
+    Your friend <%=@friends.first.name%> is a Boston <span class="level"><%= @friends.first.level.name %></span>.
   <% end %>
   Right now it looks to me like you're a <span class="level">Confused Tourist</span>.
   If you've <em>really</em> been to Boston, prove it<span class="exclaim-mini">!</span>
@@ -21,9 +21,9 @@
 
 <div id="right">
   <div class="fbgreybox profilebox">
-    <div class="whatyouare">You are a: <span class="level">Confused Tourist</span></div>
-    <div class="levellogo"><%= image_tag "http://www.watchmojo.com/blogs/images/tourist.jpg",
-      :width => 150, :height => 150 %></div>
+    <div class="whatyouare">You are a: <span class="level"><%= @user.level.name %></span></div>
+    <div class="levellogo"><%= image_tag @user.level.image_url,
+      :width => 150, :height => 150, :alt => @user.level.description %></div>
     <div class="scores">
       <div class="score">
         <img style="cursor: pointer; float:left; margin-top: 12px; margin-right: 3px" src="images/add.png"/>

@@ -12,7 +12,7 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
-        <dependency name="ajaxful_rating" version="0" bound="GREATER_OR_EQUAL" git="true" path="false" ref="rails3" doRequire="true" />
+        <dependency name="flickraw" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>

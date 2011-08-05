@@ -8,12 +8,13 @@ gem 'json'
 
 gem 'haml'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
 
-gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
+gem 'flickraw'
 
 #gem 'ajaxful_rating_jquery',
 #  :git => "git://github.com/kamui/ajaxful_rating_jquery.git",

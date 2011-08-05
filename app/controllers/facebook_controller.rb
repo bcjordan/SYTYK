@@ -1,25 +1,25 @@
 require 'pp'
 
 class FacebookController < ApplicationController
-  #ensure_authenticated_to_facebook
-  before_filter :ensure_application_is_installed_by_facebook_user
+  ensure_authenticated_to_facebook
+  #ensure_application_is_installed_by_facebook_user
 
   def canvas
-#    if params[:installed]
-#      redirect_to 'http://apps.facebook.com/soyouthinkyouknow/?reset=1'
-#    elsif !params[:reset]
-#      raise Facebooker::Session::SessionExpired
-#    end
+    if params[:installed]
+      redirect_to 'http://apps.facebook.com/soyouthinkyouknow/?reset=1'
+    elsif !params[:reset]
+      raise Facebooker::Session::SessionExpired
+    end
 
     fbsession = session[:facebook_session]
     @fbuser = fbsession.user
     @user   = User.find_or_create_by_facebook_user(@fbuser)
 
-#    begin
-#      @fbuser.friends
-#    rescue
-#      raise Facebooker::Session::SessionExpired
-#    end
+    begin
+      @fbuser.friends
+    rescue
+      raise Facebooker::Session::SessionExpired
+    end
 
 
     @faves = @user.beens.where(:favorite => true)
