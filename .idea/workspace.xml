@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-    </list>
+    <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="" />
     <ignored path="SYTYK.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,15 +71,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="11" selection-start="417" selection-end="417" vertical-scroll-proportion="-3.074074">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
               <provider selected="true" editor-type-id="text-editor">
@@ -109,10 +98,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.101123594">
+                <state line="24" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="-10.666667">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="20110805130056_change_user_uid_type.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/db/migrate/20110805130056_change_user_uid_type.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="6" column="40" selection-start="165" selection-end="165" vertical-scroll-proportion="0.101123594">
                   <folding />
                 </state>
               </provider>
@@ -147,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/vendor/plugins/facebooker/lib/facebooker/rails/controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
@@ -163,6 +160,7 @@
         <option value="$PROJECT_DIR$/app/views/facebook/_want.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20110805130056_change_user_uid_type.rb" />
       </list>
     </option>
   </component>
@@ -736,13 +734,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/facebook/_question.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="0.24444444">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/place.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.108991824">
@@ -843,7 +834,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.101123594">
+        <state line="24" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="-10.666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110805130056_change_user_uid_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="40" selection-start="165" selection-end="165" vertical-scroll-proportion="0.101123594">
           <folding />
         </state>
       </provider>
