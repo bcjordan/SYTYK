@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b3f8078-cd49-44eb-9220-82e1a50704ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SYTYK.iml" afterPath="$PROJECT_DIR$/.idea/SYTYK.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/sytyk.css" afterPath="$PROJECT_DIR$/public/stylesheets/sytyk.css" />
     </list>
     <ignored path="SYTYK.iws" />
@@ -31,7 +29,7 @@
       <file leaf-file-name="sytyk.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/sytyk.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="4" selection-start="2887" selection-end="2887" vertical-scroll-proportion="0.5470653">
+            <state line="246" column="1" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.5071982">
               <folding />
             </state>
           </provider>
@@ -513,7 +511,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/sytyk.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="4" selection-start="2887" selection-end="2887" vertical-scroll-proportion="0.5470653">
+        <state line="246" column="1" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.5071982">
           <folding />
         </state>
       </provider>
