@@ -244,6 +244,12 @@ h2
     background-color: #d8dfea;
 }
 
+.levellogo div
+{
+    height: 115px;
+    float: right;
+}
+
 .levellogo img
 {
     width: 88px;
