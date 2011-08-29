@@ -38,7 +38,12 @@ module Facebooker
   
        
     def login_url_base
+#     # top.location.href="
       "http://#{www_server_base_url}/login.php?api_key=#{api_key}&v=1.0"
+      # puts "Getting login_url_base"
+#      "https://graph.facebook.com/oauth/authorize?#{api_key}&v=1.0&appId=257381854273911&redirect_uri=http%3A%2F%2Fsoyouthinkyouknow.heroku.com"
+##      "http://www.facebook.com/connect/uiserver.php?app_id=257381854273911&next=http%3A%2F%2F0.0.0.0%3A3000%2F&display=page&locale=en_US&return_session=0&fbconnect=0&canvas=1&legacy_return=1&method=permissions.request"
+#      "http://www.facebook.com/connect/uiserver.php?app_id=257381854273911&next=http%3A%2F%2F0.0.0.0%3A3000%2F&display=page&locale=en_US&return_session=0&fbconnect=0&canvas=1&legacy_return=1&method=permissions.request&next=http%3A%2F%2F0.0.0.0%3A3000%2F%3F&canvas=true#"
     end
        
     def install_url_base
